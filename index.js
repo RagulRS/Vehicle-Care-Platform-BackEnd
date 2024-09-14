@@ -81,7 +81,7 @@ app.post('/createOrder',  async (req, res) => {
   const amount = req.body.amount;
   const options = {
     amount: amount * 100,
-    currency: 'INR',
+    currency: 'USD',
   };
 
   try {
@@ -105,7 +105,7 @@ app.post('/book-service', async (req, res) => {
         email,
         phone,
         service,
-        date, // Save the date
+        date, 
       });
   
       await newBooking.save();
